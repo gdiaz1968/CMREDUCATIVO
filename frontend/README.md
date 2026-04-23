@@ -1,3 +1,0 @@
-# Frontend CMREDUCATIVO
-
-(Por desarrollar)
