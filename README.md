@@ -7,6 +7,7 @@ Plataforma de gestión educativa con autenticación JWT.
 - **Backend:** Node.js + Express
 - **Base de datos:** MongoDB + Mongoose
 - **Auth:** JWT + bcrypt
+- **Gabriel - version Auth correcto
 
 ## Estructura
 
