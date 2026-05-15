@@ -1,66 +1,142 @@
 # CMREDUCATIVO
 
-Plataforma de gestión educativa con autenticación JWT.
+Sistema SaaS de gestión educativa híbrida multi-tenant.
 
-## Tech Stack
+---
 
-- **Backend:** Node.js + Express
-- **Base de datos:** MongoDB + Mongoose
-- **Auth:** JWT + bcrypt
-- **Gabriel - version Auth correcto
+# Estado actual
 
-## Estructura
+Actualmente el proyecto posee un backend legacy construido con:
 
+- Node.js
+- Express
+- MongoDB
+- Mongoose
+- JWT Authentication
+
+Ese backend continuará funcionando temporalmente mientras se desarrolla la nueva arquitectura profesional.
+
+---
+
+# Objetivo de migración
+
+Migrar progresivamente hacia:
+
+- NestJS
+- PostgreSQL
+- Prisma ORM
+- Arquitectura SaaS multi-tenant
+- RBAC
+- JWT Authentication avanzada
+
+---
+
+# Stack objetivo
+
+## Backend
+
+- NestJS
+- Prisma ORM
+- PostgreSQL
+
+## Frontend
+
+- Next.js
+- TypeScript
+
+---
+
+# Arquitectura
+
+- Monolito modular
+- Multi-tenant
+- tenant_id obligatorio
+- RBAC
+- JWT Authentication
+- Repository Pattern
+
+---
+
+# Estructura esperada
+
+```txt
+CMREDUCATIVO/
+├── backend-legacy/
+├── backend-v2/
+├── frontend/
+├── PROJECT_CONTEXT.md
+├── AI_RULES.md
+└── README.md
 ```
-backend/
-├── app.js                 # Servidor Express
-├── config/db.js           # Conexión MongoDB
-├── models/                # Modelos Mongoose
-│   ├── User.js
-│   └── Lead.js
-├── services/              # Lógica de negocio
-│   └── auth.service.js
-├── controllers/           # Controladores
-│   └── auth.controller.js
-├── middleware/            # Middlewares
-│   ├── auth.middleware.js
-│   └── role.middleware.js
-└── routes/                # Rutas API
-    ├── auth.routes.js
-    └── ejemplo.routes.js
-```
 
-## Instalación
+---
 
-```bash
-cd backend
-npm install
-```
+# Requisitos
 
-## Configuración
+- Node.js LTS
+- PostgreSQL
+- npm
+- VSCode
+- Continue AI
 
-Crear archivo `.env` en `backend/`:
+---
 
-```env
-JWT_SECRET=tu_secreto_aqui
-MONGO_URI=mongodb://localhost:27017/cmreducativo
-PORT=3000
-```
+# Objetivos del MVP
 
-## Ejecutar
+- Multi-tenancy
+- Auth
+- Roles y permisos
+- Cursos
+- Comisiones
+- Alumnos
+- Inscripciones
+- Asistencia
+- Pagos
+- Comunicaciones
 
-```bash
-npm start
-```
+---
 
-## Endpoints
+# Reglas técnicas
 
-| Método | Endpoint | Descripción |
-|--------|----------|-------------|
-| POST | /api/auth/register | Crear usuario |
-| POST | /api/auth/login | Iniciar sesión |
-| GET | /api/ejemplo/admin | Ruta protegida (admin) |
+- TypeScript estricto
+- DTOs obligatorios
+- Validaciones obligatorias
+- tenant_id obligatorio
+- Soft delete obligatorio
+- Arquitectura modular
+- Controllers livianos
+- Services responsables de lógica de negocio
 
-## Rutas protegidas
+---
 
-Usar header: `Authorization: Bearer <TOKEN>`
+# Roadmap técnico
+
+## Etapa 1
+- Infraestructura NestJS
+- PostgreSQL
+- Prisma
+- Multi-tenancy
+- Auth
+- RBAC
+
+## Etapa 2
+- Cursos
+- Comisiones
+- Alumnos
+- Inscripciones
+
+## Etapa 3
+- Asistencia
+- Pagos
+- Comunicaciones
+
+## Etapa 4
+- Reportes
+- Portal alumno
+- Integraciones
+
+---
+
+# Estado actual
+
+Proyecto en migración arquitectónica hacia plataforma SaaS profesional.
